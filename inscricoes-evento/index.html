@@ -596,6 +596,25 @@ window._load_script = function(url, callback) {
   addEvent(form_to_submit, 'submit', form_submit);
 })();
 
+const handlePhone = (event) => {
+  let input = event.target
+  input.value = phoneMask(input.value)
+}
+
+const phoneMask = (value) => {
+  if (!value) return "";
+
+  let maskedValue = value.replace(/\D/g, "");
+  maskedValue = maskedValue.replace(/(\d{2})(\d)/, "($1) $2");
+  maskedValue = maskedValue.replace(/(\d)(\d{4})$/, "$1-$2");
+
+  if (maskedValue.length > 15) {
+    return maskedValue.replace(/\D/g, "");
+  }
+
+  return maskedValue;
+};
+
 </script>
 
   <script src="./js/script.js"></script>
