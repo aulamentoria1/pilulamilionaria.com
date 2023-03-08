@@ -509,6 +509,39 @@
   </div>
   </section>
 
+  <script>
+  function isPlatform(host) {
+    if (
+      host.indexOf('payb.ticto.com.br') !== -1 ||
+      host.indexOf('sun.eduzz.com') !== -1 ||
+      host.indexOf('pay.kiwify.com.br') !== -1 ||
+      host.indexOf('ev.braip.com/checkout') !== -1 ||
+      host.indexOf('app.monetizze.com.br/checkout') !== -1
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  (function () {
+    var utmParamQueryString = new URLSearchParams(window.location.search);
+
+    if (utmParamQueryString.toString()) {
+      var navLinks = document.querySelectorAll('a');
+      navLinks.forEach(function (item) {
+        // if (isPlatform(item.href) || true) {
+        if (!item.href.includes('#')) {
+          if (item.href.indexOf('?') === -1) {
+            item.href += '?' + utmParamQueryString.toString();
+          } else {
+            item.href += '&' + utmParamQueryString.toString();
+          }
+        }
+      });
+    }
+  })();
+</script>
+
   <script src="js/script.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/aos.js"></script>
