@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 810px;
   margin: 0 auto;
   padding: 0px 10px;
 }
@@ -25,85 +25,70 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 84px 0px 124px 0px;
+    padding: 96px 0px 124px 0px;
+    
 }
 
-h2{
+h1, h2{
   color: #ffff;
-  font-family: "Raleway",sans-serif;
+  font-family: "Inter",sans-serif;
   font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Inter",sans-serif;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: center;
+  margin-top: 24px;
+}
+.headline p{
+  margin: 8px 0px;
+}
+.headline .p2{
+  font-size: 24px;
+}
+
+.text-green{
+  color:#1AFFB3;
+}
+
+p{
+  color: #d3d3d3;
+  font-family: "Inter",sans-serif;
+  font-size: 18px;
   line-height: 130%;
   text-align: center;
 }
 
-.btn-aula{
-  display: inline-block;
-  background-color: #0A7C4D ;
-  color: #ffff;
-  padding: 20px 104px;
-  border-radius: 50px;
-  font-family: "Raleway",sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-  margin-top: 24px;
-  text-align: center;
+.acesso-pd{
+  margin-top: 32px;
 }
 
-.btn-aula:hover{
-  transform: scale(1.05);
-  box-shadow: 4px 10px 44px rgba(14, 227, 125, 0.3);
-  
+.oferta{
+  margin-top: 16px;
 }
-
 
 @media (max-width:600px){
-  .btn-aula{
-    padding: 16px 32px;
+  .btn-acesso{
+    padding: 18px 56px;
     font-size: 14px;
     margin-top: 16px;
   }
-  h2{
-    font-size: 20px;
-  }
-  .video{
-    width: 100%;
-  }
-  .content{
-    margin-top: 24px;
+  h1, h2{
+    font-size: 32px;
   }
   .bg-aula-0{
-    padding: 84px 0px 108px 0px;
+    padding: 80px 0px 88px 0px;
   }
 }
 
-.video{
-  display: block;
-  width: 100%;
-}
-
-.ytvideo{
-  position: relative;
-  width: 100%;
-  padding-bottom: 56%;
-}
-
-iframe{
-  position: absolute;
-  width: 100%;
-  height: 100%; 
-  border: none;
-  border-radius: 10px;
-}
-
+/* ######## Oferta ############ */
 .content-flex{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.content{
-  margin-top: 32px;
 }

@@ -25,36 +25,19 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 84px 0px 124px 0px;
+    padding: 64px 0px 104px 0px;
 }
 
-h2{
+h1, h2{
   color: #ffff;
-  font-family: "Raleway",sans-serif;
+  font-family: "Inter",sans-serif;
   font-size: 32px;
   line-height: 130%;
   text-align: center;
 }
 
-.btn-aula{
-  display: inline-block;
-  background-color: #0A7C4D ;
-  color: #ffff;
-  padding: 20px 104px;
-  border-radius: 50px;
-  font-family: "Raleway",sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-  margin-top: 24px;
-  text-align: center;
-}
-
-.btn-aula:hover{
-  transform: scale(1.05);
-  box-shadow: 4px 10px 44px rgba(14, 227, 125, 0.3);
-  
+.headline h1{
+  margin-bottom: 24px;
 }
 
 
@@ -64,38 +47,99 @@ h2{
     font-size: 14px;
     margin-top: 16px;
   }
-  h2{
-    font-size: 20px;
-  }
-  .video{
-    width: 100%;
-  }
-  .content{
-    margin-top: 24px;
+  h1, h2{
+    font-size: 24px;
   }
   .bg-aula-0{
-    padding: 84px 0px 108px 0px;
+    padding: 48px 0px 88px 0px;
   }
 }
 
-.video{
+/*video youtube*/
+.video-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-vendas{
   display: block;
-  width: 100%;
+  width: 80%;
+}
+
+@media (max-width:600px){
+    .video-vendas{
+      width: 100%;
+}
 }
 
 .ytvideo{
-  position: relative;
-  width: 100%;
-  padding-bottom: 56%;
+  max-width: 100%;
+	padding-top: 56.25%;
+	position: relative;
+	width: 100%;
 }
 
-iframe{
+.ytvideo iframe {
   position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
-  height: 100%; 
-  border: none;
-  border-radius: 10px;
+  height: 100%;
+  border: 1px solid #FFFFFF66;
+  border-radius: 6px;
 }
+
+/* ######## Oferta ############ */
+
+.delay{
+  display: none;
+}
+
+.delay.active{
+  display: block;
+  transition: .3s ease;
+}
+
+
+.oferta{
+  margin-top: 40px;
+}
+
+.content-oferta ul{
+  position: relative;
+  margin-top: 24px;
+}
+
+.content-oferta li {
+  display: block;
+  font-family: "Inter",sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  line-height: 140%;
+}
+
+.preco-list {
+  color: #D9D9D9;
+  margin-bottom: 12px;
+  padding-left: 40px;
+}
+
+.preco-list::before{
+    position: absolute;
+    content: '';
+    background-image: url(../img/icon-check.svg);
+    background-size: cover;
+    width: 24px;
+    height: 18px;
+    top: 4px;
+    left: 0px;
+}
+
 
 .content-flex{
   display: flex;

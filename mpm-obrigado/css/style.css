@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  max-width: 810px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0px 10px;
 }
@@ -25,9 +25,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 96px 0px 124px 0px;
-    
+    padding: 96px 0px 104px 0px;
+    height: 100vh;
 }
+
+
 
 h1, h2{
   color: #ffff;
@@ -37,38 +39,45 @@ h1, h2{
   text-align: center;
 }
 
-h3 {
-  font-family: "Inter",sans-serif;
-  font-size: 24px;
-  line-height: 120%;
-  text-align: center;
-  margin-top: 24px;
-}
 .headline p{
   margin: 8px 0px;
 }
-.headline .p2{
-  font-size: 24px;
-}
 
-.text-green{
-  color:#1AFFB3;
-}
-
-p{
+.headline p{
   color: #d3d3d3;
   font-family: "Inter",sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 130%;
   text-align: center;
 }
 
-.acesso-pd{
-  margin-top: 32px;
+.headline h3{
+  color:#1AFFB3;
+  font-family: "Inter",sans-serif;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: center;
 }
 
-.oferta{
-  margin-top: 16px;
+.btn-acesso{
+  display: inline-block;
+  background-color: #0A7C4D ;
+  color: #ffff;
+  padding: 20px 104px;
+  border-radius: 50px;
+  font-family: "inter",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.btn-acesso:hover{
+  transform: scale(1.05);
+  box-shadow: 4px 10px 44px rgba(14, 227, 125, 0.3);
+  
 }
 
 @media (max-width:600px){
@@ -78,11 +87,15 @@ p{
     margin-top: 16px;
   }
   h1, h2{
-    font-size: 32px;
+    font-size: 24px;
   }
   .bg-aula-0{
     padding: 80px 0px 88px 0px;
   }
+}
+
+.acesso-pd{
+  margin-top: 40px;
 }
 
 /* ######## Oferta ############ */
@@ -91,4 +104,8 @@ p{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.content{
+  margin-top: 32px;
 }
