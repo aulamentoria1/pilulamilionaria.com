@@ -1,0 +1,124 @@
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body { 
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+.bg-aula-0{
+    display: block;
+    background-image: url("../img/bg-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 84px 0px 124px 0px;
+}
+
+h2{
+  color: #ffff;
+  font-family: "Raleway",sans-serif;
+  font-size: 32px;
+  line-height: 130%;
+  text-align: center;
+}
+
+.btn-aula{
+  display: inline-block;
+  background-color: #0A7C4D ;
+  color: #ffff;
+  padding: 20px 104px;
+  border-radius: 50px;
+  font-family: "Raleway",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.btn-boleto{
+  display: inline-block;
+  color: #ffff;
+  padding: 20px 104px;
+  border-radius: 50px;
+  font-family: "Raleway",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  margin-top: 24px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.btn-aula:hover{
+  transform: scale(1.05);
+  box-shadow: 4px 10px 44px rgba(14, 227, 125, 0.3);
+  
+}
+
+
+@media (max-width:600px){
+  .btn-aula{
+    padding: 16px 32px;
+    font-size: 14px;
+    margin-top: 16px;
+  }
+  h2{
+    font-size: 25px;
+  }
+  .video{
+    width: 100%;
+  }
+  .content{
+    margin-top: 24px;
+  }
+  .bg-aula-0{
+    padding: 84px 0px 108px 0px;
+  }
+}
+
+.video{
+  display: block;
+  width: 100%;
+}
+
+.ytvideo{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56%;
+}
+
+iframe{
+  position: absolute;
+  width: 100%;
+  height: 100%; 
+  border: none;
+  border-radius: 10px;
+}
+
+.content-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content{
+  margin-top: 32px;
+}
