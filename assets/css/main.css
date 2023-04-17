@@ -1,0 +1,585 @@
+@font-face {
+  font-family: Eurostile;
+  src: url('../font/Eurostile.otf') format('opentype');
+}
+
+@font-face {
+  font-family: Europa;
+  src: url('../font/Europa.otf') format('opentype');
+}
+
+:root {
+  --background: #040c19;
+  --primary: #07ffff;
+  --secondary: #4460ef;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.font-primary {
+  font-family: Europa;
+}
+
+.text-secondary {
+  color: #4460ef;
+}
+
+.bg-01 {
+  position: absolute;
+  width: 2528px;
+  height: 2529px;
+  left: -1687px;
+  top: -82px;
+
+  background: radial-gradient(
+    47.51% 50% at 50% 50%,
+    rgba(40, 30, 243, 0.33) 0%,
+    rgba(11, 0, 255, 0) 72.92%
+  );
+  z-index: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #fff;
+  font-weight: 300;
+  font-family: Europa;
+}
+
+html,
+body {
+  background-color: var(--background);
+  width: 100%;
+  height: auto;
+  font-size: 16px;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 span,
+h1 strong {
+  font-family: Eurostile;
+}
+
+img {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+input {
+  background-color: #000314 !important;
+  width: 100%;
+  margin-bottom: 15px;
+  border-image-source: linear-gradient(70deg, #07ffff, #281ef3);
+  border-width: 1pt;
+  border-image-slice: 1;
+  background-color: transparent;
+  height: 50px !important;
+  line-height: 50px !important;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: 600 !important;
+  padding: 8px 12px !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+input:focus {
+  box-shadow: 0px 0px 3px 1px var(--primary) !important;
+  outline: none;
+}
+
+._field-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+._field-wrapper.checked::before {
+  content: '';
+  width: 15px;
+  height: 9px;
+  border-left: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
+  display: block;
+  position: absolute;
+  transform: rotate(-45deg);
+  right: 10px;
+  margin-top: -4px;
+}
+
+button {
+  width: fit-content;
+  background: linear-gradient(
+    268.62deg,
+    #07ffff -25.4%,
+    #281ef3 80.5%
+  ) !important;
+
+  box-shadow: 0px 0px 18px #281ef3;
+  padding: 14px 25px !important;
+  border-radius: 1px;
+  font-weight: 600 !important;
+  color: #fff !important;
+  cursor: pointer;
+  display: block;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.button-primary {
+  width: fit-content;
+  background: linear-gradient(269.61deg, #cc00ff -26.33%, #0500ff 109.1%);
+  box-shadow: 0px 0px 18px #281ef3;
+  padding: 14px 25px !important;
+  border-radius: 1px;
+  font-weight: 600 !important;
+  color: #fff !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.button-primary-02 {
+  background: linear-gradient(
+    268.62deg,
+    #07ffff -25.4%,
+    #281ef3 80.5%
+  ) !important;
+}
+
+.button-primary:hover {
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 890px !important;
+  padding: 0 25px !important;
+  margin: 0 auto !important;
+  position: relative;
+  z-index: 9;
+}
+
+.container-lg {
+  max-width: 1100px !important;
+}
+
+/* START:: Pagina INDEX */
+.hero {
+  background-color: #000314;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero .kayky {
+  display: none;
+}
+
+.hero::after {
+  background-image: url('../images/bg-hero.webp?v=2');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: top right 50%;
+  background-size: 110%;
+  opacity: 1;
+  z-index: 0;
+}
+
+.header-remarketing {
+  position: relative;
+  z-index: 2;
+}
+
+.header-remarketing::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 26, 255, 0.15),
+    rgba(5, 1, 94, 0.1)
+  );
+  backdrop-filter: blur(5px);
+  position: absolute;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+.header-remarketing h2 {
+  text-shadow: 0px 0px 4px #50eaff;
+  color: #50eaff;
+}
+
+.hero-remarketing {
+  min-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-remarketing::after {
+  background-image: url('../images/bg-nova-era.webp?v=1');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  opacity: 1;
+  z-index: 0;
+}
+
+.hero-pesquisa {
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video {
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video::after {
+  background-image: url('../images/bg-video.webp?v=2');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: top left 60%;
+  background-size: 135%;
+  opacity: 1;
+  z-index: 0;
+}
+
+#vid_6435de8af3c3f7000818239c {
+  border-image-source: linear-gradient(70deg, #07ffff, #281ef3) !important;
+  border-width: 1pt !important;
+  border-image-slice: 1 !important;
+  margin-top: 25px;
+}
+
+/* END:: Pagina INDEX */
+
+/*START:: Pagina V2 */
+.box-evento {
+  background: #0c1428;
+  border: 1px solid #314679;
+  width: 100%;
+  height: auto;
+  padding: 40px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nova-era {
+  margin-top: -400px;
+  padding-top: 400px;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.nova-era::after {
+  background-image: url('../images/bg-nova-era.webp?v=1');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.sobre-mim {
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-mim::after {
+  background-image: url('../images/bg-sobre-mim-desktop.webp');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  opacity: 1;
+  z-index: 0;
+}
+
+.footer-nova-era {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-top: 2px solid #151c3e;
+  border-bottom: 2px solid #151c3e;
+}
+
+.footer-nova-era::before {
+  content: '';
+  background-color: #0a101d;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.footer-nova-era::after {
+  background-image: url('../images/bg-footer.webp');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.footer-nova-era h1 {
+  text-shadow: 0px 0px 15px var(--primary);
+}
+/*END:: Pagina V2 */
+
+/* Breakpoint */
+@media (max-width: 1024px) {
+  .bg-01 {
+    display: none;
+  }
+
+  .hero::after {
+    background-image: none;
+    background-size: 140%;
+    background-position: top;
+  }
+
+  .hero-remarketing::after {
+    background-size: cover;
+    background-position: right;
+  }
+
+  .hero .kayky {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block !important;
+    position: relative;
+  }
+
+  .sobre-mim {
+    padding-top: 330px !important;
+  }
+
+  .sobre-mim::after {
+    background-image: url('../images/bg-sobre-mim-mobile.webp');
+    background-size: 110%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-video {
+    min-height: auto;
+  }
+
+  .hero .kayky {
+    width: 120%;
+    max-width: 120%;
+    left: -10%;
+    top: -30px;
+    display: block !important;
+    position: relative;
+  }
+
+  .hero .hero-main {
+    margin-top: -60px !important;
+  }
+
+  #vid_6435de8af3c3f7000818239c {
+    width: calc(100% + 50px) !important;
+    border-image-source: none;
+    border-width: 0pt;
+    border-image-slice: 0;
+  }
+
+  .evento {
+    position: relative;
+    overflow: hidden;
+    margin-top: -10px;
+    z-index: 2;
+  }
+
+  .evento::after {
+    background-image: url('../images/bg-nova-era.webp?v=1');
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    opacity: 1;
+    z-index: 0;
+  }
+
+  .nova-era::after {
+    background-image: none;
+  }
+}
+/* START:: Pagina OBRIGADO  */
+.obrigado {
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.obrigado::after {
+  background-image: url('../images/bg-nova-era.webp');
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.obrigado::before {
+  content: '';
+  background: radial-gradient(
+    47.51% 50% at 50% 50%,
+    rgba(40, 30, 243, 0.33) 0%,
+    rgba(11, 0, 255, 0) 72.92%
+  );
+  position: absolute;
+  width: 100vw;
+  height: 200vh;
+  left: -50vw;
+  top: -100vh;
+}
+
+.box-step {
+  width: 100%;
+  border-image-source: linear-gradient(70deg, #07ffff, #281ef3);
+  border-width: 1pt;
+  border-image-slice: 1;
+  position: relative;
+  display: block;
+  border-radius: 5px;
+  display: flex;
+  padding: 30px 40px;
+  flex-direction: column;
+}
+
+.box-timer {
+  width: fit-content;
+  border: 2px solid var(--primary);
+  padding: 3px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .obrigado::after {
+    background-size: 100%;
+    background-position: top;
+  }
+
+  .obrigado::before {
+    opacity: 0.7;
+  }
+
+  .box-step {
+    padding: 30px 20px;
+  }
+}
+/* END:: Pagina OBRIGADO  */
+
+._form-label {
+  font-size: 14px;
+}
+._error-inner {
+  color: #f75252 !important;
+  font-size: 14px;
+  padding-left: 20px;
+  position: absolute;
+  right: 0px;
+  top: -21px;
+}
+
+.container-hidden {
+  display: none;
+}
